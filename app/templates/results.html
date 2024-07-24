@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>PCOS Results</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f9;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                text-align: center;
+                background: white;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            h1 {
+                color: #5a2a83; /* Consistent color theme */
+                margin: 0 0 20px 0;
+            }
+            a {
+                color: #5a2a83; /* Consistent link color */
+                text-decoration: none;
+                font-weight: bold;
+                background-color: #e0e0e0;
+                padding: 8px 16px;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+            a:hover {
+                background-color: #5a2a83;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Name: {{ name }}</h1>
+            <h1>Result: {{ result }}</h1>
+            <a href="{% url 'home' %}">Click to go home</a>
+        </div>
+    </body>
+</html> -->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .logo {
+            width: 150px;
+        }
+        center {
+            background-color: #ffffff;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #000;
+        }
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+        .grid-container div {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #155b34;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #123d25; /* Darker green for hover */
+        }
+        a {
+            display: block; /* Center the link */
+            text-align: center;
+            margin: 10px auto;
+            padding: 8px 16px;
+            background-color: #155b34;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #123d25; /* Darker shade for hover */
+        }
+
+        .container h1.name, .container h1.result {
+    color: #000; /* Black color for Name and Result */
+}
+
+
+</style>
+</head>
+<body onload="calculateBMI()">
+    <div class="navbar">
+        <a href="https://rwandamilitaryhospital.rw"><img class="logo" src="{% static 'img/logo-header.png' %}"></a>
+    </div>
+    <center>
+        <h1>PCOS Detection System</h1>
+    </center>
+    <div class="container">
+        <h1>Name: {{ name }}</h1>
+        <h1>Result: {{ result }}</h1>
+        <a href="{% url 'home' %}">Click to go home</a>
+    </div>
+</body>
+</html>
+    
+    
